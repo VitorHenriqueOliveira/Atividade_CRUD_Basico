@@ -13,6 +13,10 @@ app.set("view engine", "ejs");
 const indexRouter = require("./routes/index");
 app.use("/", indexRouter);
 
+// Rota para os Integrantes
+const integranteRouter = require("./routes/integrantes");
+app.use('/integrantes', integranteRouter);
+
 // Rotas para categorias
 const categoriaRouter = require("./routes/categorias");
 app.use("/categorias", categoriaRouter);
