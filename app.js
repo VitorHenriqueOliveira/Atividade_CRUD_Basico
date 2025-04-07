@@ -31,3 +31,6 @@ db.sequelize.sync().then(() => {
         console.log("Servidor em execução na porta 3000");
     });
 });
+
+// Exportar o app para o Vercel
+module.exports = app;
