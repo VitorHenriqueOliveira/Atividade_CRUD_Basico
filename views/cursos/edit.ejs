@@ -1,0 +1,19 @@
+<h1>Editar Curso</h1>
+<form action="/cursos/edit/<%= curso.id %>" method="POST">
+    <div class="form-group">
+        <label for="nome">Curso</label>
+        <input type="text" class="form-control" id="nome" name="nome" value="<%= curso.nome %>" required>
+    </div>
+    <div class="form-group">
+        <label for="aluno">Aluno</label>
+        <select class="form-control" id="aluno" name="alunoId" required>
+            <% alunos.forEach(aluno => { %>
+            <option value="<%= aluno.id %>" <%=aluno.id === curso.alunoId ? 'selected' : '' %>>
+                <%= aluno.nome %>
+            </option>
+            <% }) %>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+</form>

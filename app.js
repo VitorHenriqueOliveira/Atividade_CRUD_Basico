@@ -29,6 +29,14 @@ app.use("/alunos", alunoRouter);
 const professorRouter = require("./routes/professores");
 app.use("/professores", professorRouter);
 
+// Rota para cursos
+const cursoRouter = require("./routes/cursos");
+app.use("/cursos", cursoRouter);
+
+// Rota para matérias
+const materiaRouter = require("./routes/materias");
+app.use("/materias", materiaRouter);
+
 // Iniciar o servidor e sincronizar com o banco de dados
 db.sequelize.sync().then(() => {
     app.listen(3000, () => {
