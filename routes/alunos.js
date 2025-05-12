@@ -38,9 +38,9 @@ router.get("/edit/:id", async (req, res) => {
     const aluno = await Aluno.findByPk(req.params.id);
     res.render(
         "base", {
-            title: "Editar Aluno",
-            view: "alunos/edit",
-            aluno,
+        title: "Editar Aluno",
+        view: "alunos/edit",
+        aluno,
     });
 });
 

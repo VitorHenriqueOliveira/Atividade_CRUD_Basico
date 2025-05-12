@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
         const materias = await Materia.findAll({
             include: [{ model: Professor, as: "Professor" }],
         });
+
         res.render("base", {    
             title: "Materias",
             view: "materias/show",
